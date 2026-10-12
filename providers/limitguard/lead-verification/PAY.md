@@ -16,5 +16,5 @@ Limitguard validates B2B leads and counterparties for AI agents. It checks a com
 - For a Dutch or Belgian sales lead, call `POST /v1/leads/verify` once: it covers register, VAT, mail server, IBAN country and sanctions in one call.
 - Start with `POST /v1/risk/score` for quick triage; call `POST /v1/entity/check` only when you need the full per-source breakdown.
 - Send the identifiers you have (`kvk_number`, `cbe_number`, `vat_number`, `domain`): they narrow the lookup and raise confidence.
-- Set `X-Response-Quality: cached` when a result up to a day old is fine; it is the cheapest tier.
+- Set `X-Response-Quality: cached` when a recent result for the same company is fine; it is the cheapest tier.
 - Reuse a result for the same company within a session instead of re-checking it.
